@@ -36,3 +36,5 @@ Write-Host $AuthenticatorCertificate.KeyCredentials
 {% endhighlight %}
 
 The above script will generate the PFX file in the location. It will show something like the below.
+
+Random update for testing the Pages..
