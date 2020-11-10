@@ -1,12 +1,12 @@
 # Site
 name: Living inside the Cloud
-description: 'This is where you can find thoughts the journey while living inside the mighty cloud.'
+description: 'This is where you can find thoughts and the journey while living inside the mighty cloud.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
-disqus: 'demowebsite'
+disqus: 'arjunumenon'
 email: 'arjun.umenon@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+mailchimp-list: ''
 
 include: ["_pages"]
 permalink: /:title/
@@ -20,20 +20,12 @@ plugins:
   
 authors:
     sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
+      name:           Arjun Menon
+      site:           https://www.arjunumenon.com
       avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
-
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "Hi, I am Arjun. "
+      email:          arjun.umenon@gmail.com
+      twitter:        https://twitter.com/arjunumenon
  
 # Defaults
 defaults:
