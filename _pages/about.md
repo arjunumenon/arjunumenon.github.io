@@ -9,9 +9,9 @@ I am Arjun U Menon. I work as a Technical Lead for IT Services company based out
 I like to call myself as a consultant. Love to give solutions to the client who wants to be lazy like me. Wants to make things happen with the least steps. Those are the people who I love most and I thrive to make their life easier.
 I live in India where the diversities are part and parcel of the entire country.
 
-Off late I started contributing to the mighty Microsoft 365 Patterns and Practices Community. Thought I started contributing to the community a year and half back, it is off late, I started loving it. Needless to say, there was no looking back. I had been a big fan of [Microsoft 365 CLI](https://pnp.github.io/cli-microsoft365/) right from the beginning and no wonder I started contributing to that.
+Off late I started contributing to the mighty Microsoft 365 Patterns and Practices Community. Thought I started contributing to the community a year and half back, it is off late, I started loving it. Needless to say, there was no looking back. I had been a big fan of [Microsoft 365 CLI](https://pnp.github.io/cli-microsoft365/){:target = "_blank"} right from the beginning and no wonder I started contributing to that.
 
-Had been part of [The Toastmasters Club](https://www.toastmasters.org/) for more than 3 years. But now currently in break from the amazing journey.
+Had been part of [The Toastmasters Club](https://www.toastmasters.org/){:target = "_blank"} for more than 3 years. But now currently in break from the amazing journey.
 
 When I am not delved in the technical zone, you can see me indulged in food or kindling eagerly through my Kindle.
 
