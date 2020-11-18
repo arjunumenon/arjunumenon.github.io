@@ -51,8 +51,9 @@
         lastScrollTop = st;
     }
     
-    
-    $('.site-content').css('margin-top', $('header').outerHeight() + 'px');
+    //Commented by Arjun to manage the top margin. Original Given below
+    //$('.site-content').css('margin-top', $('header').outerHeight() + 'px');
+    $('.site-content').css('margin-top', '30px');
 
 
 function loadSearch(){

@@ -22,12 +22,12 @@ plugins:
 # Author Settings
 author: Arjun U Menon # add your name
 author-img: Arjun.png # add your photo
-about-author: Microsoft 365 developer who lives inside the cloud. # add description
-social-twitter: arjunumenon # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: arjunumenon # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+about-author: Microsoft 365 consultant. Living inside the cloud. # add description
+social-twitter: arjunumenon #Twitter Handle
+social-facebook: # Facebook handle
+social-github: arjunumenon #  Github handle
+social-linkedin: arjunumenon # Linkedin handle
+social-email: arjun@a-um.me #  Email address
  
 # Defaults
 defaults:
