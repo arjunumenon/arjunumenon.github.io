@@ -27,7 +27,7 @@ Well! How much ever cliched it may be, that is what it happened in reality. When
 2. Nothing could be better than getting this laurel for my First Contribution to the great #OSS (Open Source Software)
 
 The best part was that, I did not want to strive to get this award. I wouldn't have done it even if I wanted to. Owing to my laziness again. One thing which I did is, I continued doing what I loved. Contributing to the awesome Microsoft 365  CLI.
-After 2 weeks, I completed minimum criteria. Little did I realize after a week that, I had contributed 2 more Pull Request (PR) than the required. 
+After 2 weeks, I completed minimum criteria. Little did I realize after a week that, I had contributed 2 more Pull Request (PR) than the required.
 Had I tried going behind the winning alone, I am pretty sure, I would have stopped in between.
 I am not sure, whether I was going behind excellence, I was sure, I am doing something which I loved.
 When you have started to contribute to the amazing community, especially Microsoft 365 Patterns and Practices (PnP), you realize that they are the best community. You cannot see better inclusiveness than this. You get chance to rub shoulders (Virtually) with stalwarts whose blogs you had been following right from the beginning of your career. Where else can you you get this chance. I don't think anywhere else.
