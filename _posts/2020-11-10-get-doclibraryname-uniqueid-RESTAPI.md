@@ -85,5 +85,4 @@ and Bingo, you will get the result like below.
     }
  And you can can see that there is a property called **Title** which is basically the name of your document library.
 
-
- <span>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Maarten van den Heuvel</a> on <a href="https://unsplash.com/s/photos/document-library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+ <span>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Maarten van den Heuvel</a> on Unsplash</span>

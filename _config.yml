@@ -28,6 +28,9 @@ social-facebook: # Facebook handle
 social-github: arjunumenon #  Github handle
 social-linkedin: arjunumenon # Linkedin handle
 social-email: arjun@a-um.me #  Email address
+
+#Custom Configurations - Changed on runtime
+sticky-char-trunc: 128 #Give the number of charachters to be truncated
  
 # Defaults
 defaults:
@@ -52,7 +55,6 @@ highlighter: rouge
 
 # Paginate
 paginate: 10
-
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
