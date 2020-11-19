@@ -25,7 +25,7 @@ Since you are going to create an Application in Azure AD, you would need the per
 
 ## Generate Certificate
 
-{% highlight powershell %}
+```powershell
 $CommonName = "SP Online PowerShell Authentication"
 $OrganizationName = "AUM INC."
 $CertificatePath = "C:\PowerShellScript\Certifate\\PnPPSSPACerti.PFX"
@@ -33,7 +33,7 @@ $CertificatePath = "C:\PowerShellScript\Certifate\\PnPPSSPACerti.PFX"
 $AuthenticatorCertificate = New-PnPAzureCertificate -CommonName $CommonName -Organization $OrganizationName  -out $CertificatePath
 
 Write-Host $AuthenticatorCertificate.KeyCredentials
-{% endhighlight %}
+```
 
 The above script will generate the PFX file in the location. It will show something like the below.
 
