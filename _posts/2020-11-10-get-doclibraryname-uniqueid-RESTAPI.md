@@ -7,7 +7,7 @@ image: assets/images/documentlibrary-name-REST.jpg
 tags: [SharePoint]
 ---
 
-Have you recieved a use case where you need to know the Document Library Name from the Unique Id of the File. Let us assume you have a URL with unique File id something similar to this, 
+Have you recieved a use case where you need to know the Document Library Name from the Unique Id of the File. Let us assume you have a URL with unique File id something similar to this,
 
 ` https://contoso.sharepoint.com/:w:/r/sites/contososite/_layouts/15/Doc.aspx?sourcedoc=%7BD0E8F75B-DCD7-478E-9CAA-41944F21D722%7D&file=MySharingCentral.docx&action=default&mobileredirect=true `
 
@@ -85,4 +85,4 @@ and Bingo, you will get the result like below.
     }
  And you can can see that there is a property called **Title** which is basically the name of your document library.
 
- <span>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Maarten van den Heuvel</a> on Unsplash</span>
+ <span>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Maarten van den Heuvel</a> on Unsplash</span>

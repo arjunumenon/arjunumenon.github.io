@@ -1,8 +1,7 @@
 ---
 title: "About"
-layout: page-sidebar
+layout: page
 permalink: "/about.html"
-image: "/assets/images/About-me.jpg"
 comments: true
 ---
 I am Arjun U Menon. I work as a Technical Lead for IT Services company based out of India. A person who started loving the cloud right at the moment when it came in the picture. Always been a fan of Microsoft stack and now exploring the beauty of the mighty Microsoft 365.
@@ -16,3 +15,5 @@ Had been part of [The Toastmasters Club](https://www.toastmasters.org/){:target 
 When I am not delved in the technical zone, you can see me indulged in food or kindling eagerly through my Kindle.
 
 Have a pleasant stay while you **Live Inside the Cloud**
+
+<!-- <span>Photo by <a href="https://unsplash.com/@sctgrhm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Scott Graham</a> on Unsplash</span> -->
