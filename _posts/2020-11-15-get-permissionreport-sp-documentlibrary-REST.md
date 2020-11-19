@@ -2,15 +2,15 @@
 layout: post
 title:  "Get Permission Report for a file in SharePoint Online using REST API"
 author: Arjun Menon
-categories: [ SharePoint Online, Document Library ]
+categories: [ SharePointOnline, DocumentLibrary ]
 image: assets/images/Permission-SPDocument-REST.jpg
-tags: [SharePointOnline, featured]
+tags: [SharePointOnline]
 ---
 
 How do we get the permission report for a particular SharePoint file. Now with change in Sharing experience in Modern SharePoint, there are many aspects like **external sharing**, **direct sharing**, **sharing via link** etc for sharing unlike the conventional sharing which was there before. With easiness comes responsibility, right?
 How do we get the permission report using REST API.
 
-There is a method called `GetSharingInformation` which you is part of SharePoint List Item REST API which could be called. This will give you an output which has detailed information about Shared links, principals with whom the file has been shared with etc. etc. All you need to do is go through the result and fetch the needed information. 
+There is a method called `GetSharingInformation` which you is part of SharePoint List Item REST API which could be called. This will give you an output which has detailed information about Shared links, principals with whom the file has been shared with etc. etc. All you need to do is go through the result and fetch the needed information.
 So your complete URL would look something like this,
 
     https://contoso.sharepoint.com/sites/contososite/_api/web/lists/getbytitle('Documents')/items(2)/GetSharingInformation?$select=permissionsInformation&$Expand=permissionsInformation

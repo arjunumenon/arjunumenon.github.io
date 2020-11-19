@@ -2,7 +2,7 @@
 layout: post
 title:  "Get SharePoint Document Library Name from the File Unique ID using REST API"
 author: Arjun Menon
-categories: [ SharePoint Online, Document Library ]
+categories: [ SharePointOnline, DocumentLibrary ]
 image: assets/images/documentlibrary-name-REST.jpg
 tags: [SharePoint]
 ---

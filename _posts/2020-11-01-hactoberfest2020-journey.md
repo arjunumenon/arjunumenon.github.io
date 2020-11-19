@@ -2,7 +2,7 @@
 layout: post
 title:  "Hactoberfest 2020 - Icing on the Cake - Journey"
 author: Arjun Menon
-categories: [ Hactoberfest 2020, CLI for Microsoft 365 ]
+categories: [ Hactoberfest2020, Microsoft365CLI ]
 image: assets/images/Hactoberfest2020-Journey-ArjunMenon.jpg
 tags: [Hactoberfest2020, Microsoft365CLI, sticky]
 ---
