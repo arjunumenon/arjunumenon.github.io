@@ -1,5 +1,5 @@
 # Site
-name: Arjun U Menon
+name: Living Inside the Cloud - Arjun's Musings
 description: 'This is where I jot down my learnings of Microsoft 365 and SharePoint Development. Best practices about Microsft 365 development'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
@@ -22,7 +22,7 @@ plugins:
 # Author Settings
 author: Arjun U Menon # add your name
 author-img: Arjun.png # add your photo
-about-author: Microsoft 365 consultant. Living inside the cloud. # add description
+about-author: Microsoft 365 consultant who lives inside the cloud. Trying his hands on the Mighty Microsoft 365 World # add description
 social-twitter: arjunumenon #Twitter Handle
 social-facebook: # Facebook handle
 social-github: arjunumenon #  Github handle

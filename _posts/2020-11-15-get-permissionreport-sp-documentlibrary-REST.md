@@ -3,7 +3,7 @@ layout: post
 title:  "Get Permission Report for a file in SharePoint Online using REST API"
 author: Arjun Menon
 categories: [ SharePointOnline, DocumentLibrary ]
-image: assets/images/Permission-SPDocument-REST.jpg
+image: assets/images/2020-11-15-Permission-SPDocument-REST.jpg
 tags: [SharePointOnline]
 ---
 
