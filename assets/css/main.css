@@ -8693,3 +8693,13 @@ html {
     text-align: center;
     margin: 0;
   }
+
+  /*Anchor Tag Styling for Article Posts*/
+  .article-post a:link, .article-post a:visited, .page-content a:link, .page-content a:visited {
+    border-bottom: 3px solid #e8ad8a;
+}
+.contact a:link, .contact a:visited{
+  border-bottom:none;
+}
+
+/*End of Anchor styling section*/

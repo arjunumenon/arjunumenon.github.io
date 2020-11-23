@@ -7,7 +7,7 @@ image: assets/images/2020-11-17-convert-word-pdf-powerAutomate.jpg
 tags: [SharePointOnline, PowerAutomate, featured]
 ---
 
-Have you faced a situation where you want to convert a Microsoft Word document in SharePoint Document Library to PDF using Power Automate? When you check the Power Automate Actions, you see that there are no actions available _(at least when I am writing this blog)_ which converts Microsoft word document to PDF from SharePoint. But fortunately for us, the connector is available for OneDrive for Business files. So our approach would be something like below
+Have you faced a situation where you want to convert a Microsoft Word document in SharePoint Document Library to PDF using Power Automate? When you check the Power Automate Actions, you see that there are no actions available _(at least when I write this blog)_ which converts Microsoft word document to PDF from SharePoint. But fortunately for us, the connector is available for OneDrive for Business files. So our approach would be something like below
 
 ## Approach
 

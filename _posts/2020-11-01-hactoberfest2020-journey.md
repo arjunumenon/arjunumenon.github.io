@@ -21,7 +21,7 @@ Well the  the first thing which came to my mind -
 
 Cliched.  Highly cliched isn't it?
 
-Well! How much ever cliched it may be, that is what it happened in reality. When I actively started contributing to [Microsoft 365 CLI](https://aka.ms/cli-m365){:target="_blank"}, I loved right from the first contribution. I was actively contributing to the project since I loved doing it. When I saw the message in twitter that Microsoft 365 CLI, is part of that, I literally could not hold my happiness.
+Well! How much ever cliched it may be, that is what it happened in reality. When I actively started contributing to [CLI for Microsoft 365](https://aka.ms/cli-m365){:target="_blank"}, I loved right from the first contribution. I was actively contributing to the project since I loved doing it. When I saw the message in twitter that CLI for Microsoft 365, is part of that, I literally could not hold my happiness.
 
 1. I had already made 3 contributions *(You need 4 or more Pull Request (PR) to be eligible for that)*
 2. Nothing could be better than getting this laurel for my First Contribution to the great #OSS (Open Source Software)
