@@ -12,7 +12,7 @@ Off late I started contributing to the mighty Microsoft 365 Patterns and Practic
 
 Had been part of [The Toastmasters Club](https://www.toastmasters.org/){:target="_blank"} for more than 3 years. But now currently in break from the amazing journey.
 
-When I am not delved in the technical zone, you can see me indulged in food or kindling eagerly through my Kindle.
+When I am not delved in the technical zone, you can see me indulged in food or kindling eagerly through my Amazon Kindle 📔.
 
 Have a pleasant stay while you **Live Inside the Cloud**. Feel free to connect me via any of the below social media handles.
 
