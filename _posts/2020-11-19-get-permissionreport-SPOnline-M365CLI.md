@@ -7,7 +7,7 @@ image: assets/images/2020-11-19-Permission-SPDocument-M365CLI.jpg
 tags: [SharePointOnline, featured, M365CLI]
 ---
 
-Have you struggled a way to know the Sharing Information details for a particular file which is there in SahrePoint Online or OneDrive for Business? Have you wondered and thought about a way where you need to know to which all users a SharePoint Online Document Library file or a OneDrive file has been shared with? Or you want to quickly know the the shared information details of a particular file in your OneDrive
+Have you struggled a way to know the Sharing Information details for a particular file which is there in *SharePoint Online* or *OneDrive for Business*? Have you wondered and thought about a way where you need to know to which all users a SharePoint Online Document Library file or a OneDrive file has been shared with? Or you want to quickly know the the shared information details of a particular file in your OneDrive
 
  Well the first thing which comes to your mind is to go look in the **Manage Access** approach from the User Interface of File sharing settings. It does gives you a high-level information about the shared files. But this may get difficult if you want to know how many of those users were external. Well, using User Interface you will not get that information and there you have reached a difficult situation.
 You will also find it difficult to know about shared details if the file is shared via Direct Link
