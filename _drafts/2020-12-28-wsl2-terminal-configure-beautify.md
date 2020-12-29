@@ -6,7 +6,7 @@ categories: [ WSL2, DevelopmentSetup]
 image: assets/images/2020-12-28-wsl2-terminal-configure-and-beautify.jpg
 tags: [WSL2, featured]
 ---
-Ever since the release of WSL (Windows Subsystem for Linux), it has been all over the news and the beatiful flavour of Linux which could be used via Windows. I am not going into the benefits of the WSL and its grip over the performance. In this blog, I will talk through the tips & trips and the ways how you can beautify your terminal which shows the needed information in your terminal in quick glance.
+Ever since the release of [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/about){:target="_blank"}, it has been all over the news and the beatiful flavour of Linux which could be used via Windows. I am not going into the benefits of the WSL and its grip over the performance. In this blog, I will talk through the tips & trips and the ways how you can beautify your terminal which shows the needed information in your terminal in quick glance.
 
 ## Install WSL
 
@@ -15,8 +15,7 @@ I am not going into the details on how do you setup WSL in Windows 10. There is 
 ## Terminal before setup
 
 Before you configure the steps mentioned below, all you get is a terminal window something below.
-![Test](../assets/images/blog-usedimages/2020-11-19_Permission-SPDocument-M365CLI-Output.jpg
-)
+![OriginalLinuxTerminal](../assets/images/blog-usedimages/2020-12-28_1_OriginalScreen.png)
 
 ## Configure WSL
 
@@ -42,14 +41,14 @@ According to [this post](https://www.hanselman.com/blog/its-time-for-you-to-inst
 > If your source is under /mnt/c or /mnt anywhere, the git calls being made to populate the prompt are super slow.
 > Be warned. Do your Linux source code/git work in the Linux filesystem for speed until WSL2 gets the file system faster under /mnt
 
-For you to update the default directory
+For you to update the default directory, we need to update the [Windows Terminal Profile Settings](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings){:target="_blank"} for Ubuntu.
 
 1. Type `cd ~` in your terminal
 2. Then type `explorer.exe .`
 3. This will open windows explorer of your default terminal
 4. Copy the location from the addressbar which will be something like this `\\wsl$\Ubuntu-20.04\root`
 5. In your Ubuntu Profile, add the attribute named `startingDirectory` and add the root address there
-6. Your Ubuntu Profile may look something like below
+6. After the change, your Ubuntu Profile may look something like below
 
 ```json
   "profiles": [
