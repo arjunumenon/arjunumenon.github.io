@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setup and configure Windows 10 WSL 2 Terminal with plug-ins and themes"
+title:  "Setup and configure WSL 2 with plug-ins and themes for your development setup"
 author: Arjun Menon
 categories: [ WSL2, DevelopmentSetup]
 image: assets/images/2020-12-28-wsl2-terminal-configure-and-beautify.jpg
