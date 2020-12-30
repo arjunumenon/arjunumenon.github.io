@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setup and beautify Windows 10 WSL 2 Terminal"
+title:  "Setup and configure Windows 10 WSL 2 Terminal with plug-ins and themes"
 author: Arjun Menon
 categories: [ WSL2, DevelopmentSetup]
 image: assets/images/2020-12-28-wsl2-terminal-configure-and-beautify.jpg
@@ -21,7 +21,7 @@ Before you configure the steps mentioned below, all you get is a terminal window
 
 ### 1. Make Ubuntu as Default Profile
 
-Since we are focusing on setting up WSL terminal, it is best to keep your Ubuntu Linux terminal as the default terminal. Once you do that, once you open Windows Terminal, by default Ubuntu Window will get opened
+Since we are focusing on setting up WSL terminal, it is best to keep your Ubuntu Linux terminal as the default terminal. Once you do that, the moment you open Windows Terminal, Ubuntu Window will get opened.
 
 1. Click Settings of the Terminal
 2. That will open a JSON file
@@ -48,6 +48,7 @@ For you to update the default directory, we need to update the [Windows Terminal
 3. This will open windows explorer of your default terminal
 4. Copy the location from the addressbar which will be something like this `\\wsl$\Ubuntu-20.04\root`
 5. In your Ubuntu Profile, add the attribute named `startingDirectory` and add the root address there
+   1. Make sure you change `\` from the copied address to `/` which is the equivalent of Linux
 6. After the change, your Ubuntu Profile may look something like below
 
 ```json
@@ -136,23 +137,21 @@ If you want to contribute to CLI for Microsoft 365, then we may need Node versio
 
 For installing NVM, you need to.
 
-Execute the command `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
+1. Execute the command `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
+2. Ensure that `NVM_DIR` attribute is added in `./zhrc` file
+   1. Execute `code ~/.zshrc`
+   2. Ensure the below code is available in the opened file
 
-Ensure that `NVM_DIR` attribute is added in `./zhrc` file
-
-Execute `code ~/.zshrc`
-Ensure the below code is available in the opened file
-
-  ```bash
+```bash
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
-IF the above snippet is not  available in .zshrc file, add the above code so that the command `nvm` works when terminal is loaded
+>IF the above snippet is not  available in .zshrc file, add the above code so that the command `nvm` works when terminal is loaded
 
 #### Install Node version and alias it
 
-There is a brilliant way where you can alias Node versions using NVM. This was a brilliant tip which I saw in [Garry Trinder's](https://twitter.com/garrytrinder){:target="_blank"} blog about [Setting up WSL 2](https://garrytrinder.github.io/2020/12/my-wsl2-windows-terminal-setup){:target="_blank"} where he has shown this tip if you quickly want to switch the node versions.
+There is a brilliant way where you can alias Node versions using NVM. This was a brilliant tip which I saw in [Garry Trinder's](https://twitter.com/garrytrinder){:target="_blank"} blog about [Setting up WSL 2](https://garrytrinder.github.io/2020/12/my-wsl2-windows-terminal-setup){:target="_blank"} where he has shown this tip when you quickly want to switch the node versions. There are also many other cool tips available in [his blog](https://garrytrinder.github.io/2020/12/my-wsl2-windows-terminal-setup){:target="_blank"} where you can use in your terminal
 
 ```bash
 nvm install 14
@@ -237,12 +236,35 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 It is recommended to install the font named `Meslo Nerd Font` since it works well with the theme. During the first configuration, prompt may ask whether to install the recommended fonts. If you give **YES**, the fonts will be installed automatically.
 You can also manually install the fonts using [this instructions](https://github.com/romkatv/powerlevel10k#manual-font-installation){:target="_blank"} as well.
 
+**After the installation of font, esure that the attribute `"fontFace": "MesloLGS NF"` and `"fontSize": 14` is added in the `settings.json`. Your final Profile settings may look something like below**
+
+```json
+  "profiles": [
+    {
+      "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+      "hidden": false,
+      "name": "Ubuntu-20.04",
+      "source": "Windows.Terminal.Wsl",
+      "startingDirectory": "//wsl$/Ubuntu-20.04/root",
+      "fontFace": "MesloLGS NF",
+      "fontSize": 14,
+      "colorScheme": "One Half Dark"
+    },
+    {
+      "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+      "name": "cmd",
+      "commandline": "cmd.exe",
+      "hidden": false,
+      "fontFace": "MesloLGS NF",
+      "fontSize": 14,
+      "colorScheme": "Atom One Dark"
+    }
+  ]
+```
+
 ##### Configuration Wizard
 
-Once everything is configured correctly and if you re-open the terminal, you will get a screen something like below.
-![powerlevel-configure](../assets/images/blog-usedimages/2020-12-28_7_theme-powerlevel-1.png)
-
-One of the biggest adwantage of this theme is that - you can design how the shell looks using a User Interface. The theme configuration manager will ask set of questions and will show how the screens looks like. You can easily customize the theme without editing the theme file which I loved about this. You can also modify the theme at any point of time. Some of the cool configurations which I loved about this theme are
+One of the biggest advantage of this theme is that - you can design how the shell looks using a User Interface. The theme configuration manager will ask set of questions and will show how the screens looks like. You can easily customize the theme without editing the theme file which I loved about this. You can also modify the theme at any point of time. Some of the cool configurations which I loved about this theme are
 
 * Git Controls
 * Arrow Configurations
@@ -250,6 +272,7 @@ One of the biggest adwantage of this theme is that - you can design how the shel
 * 24 hour / 12 Hour time
 
 Once you have configured everything, your screen may look something like below
+![powerlevel-configure](../assets/images/blog-usedimages/2020-12-28_7_theme-powerlevel-1.png)
 
 #### Other themes
 
@@ -263,8 +286,10 @@ Once your setup is complete, your terminal will look something like below.
 
 ### Running Version of the WSL2 Terminal
 
+_Please note that the icons in the below screen recordings are not shown properly. It is an issue with the screen recording. Once you have configured everything properly, it will be shown correctly_
+
 <script id="asciicast-mkt8Cvqweh8I4aU89bz353eAN" src="https://asciinema.org/a/mkt8Cvqweh8I4aU89bz353eAN.js" async></script>
 
-Trust me, with this terminal in place you can really feel the difference in the run and build performance for your projects. So why wait? Start setting up the terminal. Trust me, all it takes is less than half an hour for all the above steps.
+Trust me, with this terminal in place you can really feel the difference in the run and build performance for your projects. So why wait? Start setting up the terminal. All it takes is less than half an hour for all the above steps.
 
 Let me know how did the configuration go.
