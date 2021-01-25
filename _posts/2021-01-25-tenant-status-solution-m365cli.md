@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Monitor and Notify Office 365 health status using CLI for Microsoft 365"
+title:  "Monitor and Notify Microsoft 365 health status using CLI for Microsoft 365"
 author: Arjun Menon
 categories: [ M365Status, M365CLI, ITPro]
 image: assets/images/2021-01-19-tenant-status-solution-m365cli.jpg
@@ -198,3 +198,5 @@ In this blog, we will not be covering about scheduling the scripts in PowerShell
 ## Need to know more on how to use CLI for Microsoft 365
 
 If you are interested in getting started with [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/){:target="_blank"} and its powerful features, checkout the awesome [community demo](https://youtu.be/kI8id6Svm9g?t=2696){:target="_blank"} by [Albert-Jan Schot (Appie Schot)](https://twitter.com/appieschot){:target="_blank"} where Appie has covered on how to get started with CLI for Microsoft 365.
+
+Photo by [Austin Distel](https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"} on Unsplash
