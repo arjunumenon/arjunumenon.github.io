@@ -7,17 +7,17 @@ image: assets/images/2021-01-19-tenant-status-solution-m365cli.jpg
 tags: [M365Status, M365CLI, featured]
 ---
 
-Are you an IT Pro who wants to have a solution which checks the status of your Microsoft 365 Tenant.
+Are you an IT Pro who wants to have a solution that checks the status of your Microsoft 365 Tenant.
 
-How about if you get notified when something goes wrong in your tenant and you gets that information before your users complain. Awesome, right?
+How about if you get notified when something goes wrong with your tenant and you get that information before your users complain. Awesome, right?
 
 ## Solution
 
-In this blog, I am showing a way where you can schedule a script which will check the status of your tenant. If something is not right in the tenant, it will save the information to a SharePoint List and will notify the user. I am also giving a bonus solution where I have created a simple Power Automate which will identify the changes and will complete some of the process which is designed for notification
+In this blog, I am showing a way where you can schedule a script that will check the status of your tenant. If something is not right with the tenant, it will save the information to a SharePoint List and will notify the user. I am also giving a bonus solution where I have created a simple Power Automate which will identify the changes and will complete some of the processes which are designed for notification.
 
-[CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/){:target="_blank"} provides some powerful and lightweight commands via which you can get the health status of your Office 365 Tenant. With the combination multiple commands, you can create a full fledged and powerful solution through which you can get updates, notified if some of the services are not working as expected.
+[CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/){:target="_blank"} provides some powerful and lightweight commands via which you can get the health status of your Office 365 Tenant. With the combination of multiple commands, you can create a full-fledged and powerful solution through which you can get updates, notified if some of the services are not working as expected.
 
-In this blog, I am using Windows for showing the use case. You as a user are not restricted to use PowerShell since [CLI for Microsoft 365 is a cross-platform CLI](https://pnp.github.io/cli-microsoft365/about/why-cli/){:target="_blank"} and is independent of the OS platform which you uses.
+In this blog, I am using Windows for showing the use case. You as a user are not restricted to use PowerShell since [CLI for Microsoft 365 is a cross-platform CLI](https://pnp.github.io/cli-microsoft365/about/why-cli/){:target="_blank"} and is independent of the OS platform which you use.
 
 ## Index
 
@@ -45,13 +45,14 @@ In this blog, I am using Windows for showing the use case. You as a user are not
 
 ### Authentication and Login
 
-Biggest advantage CLI for Microsoft 365 has is its ability to [Persist Connection Information](https://pnp.github.io/cli-microsoft365/concepts/persisting-connection/){:target="_blank"}. After logging in to Microsoft 365, the CLI for Microsoft 365 will persist the information about the connection until you explicitly log out from Microsoft 365
-Once you have authenticated to the tenant, your scripts will be executed without the need for authentication everytime. Since the solution is not a confidential or Complex business Process, it is safe to go ahead with this approach. CLI for Microsoft 365 also provides [Logging in with Certificate](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/#log-in-using-a-certificate){:target="_blank"} if you prefer that approach.
+The biggest advantage CLI for Microsoft 365 has is its ability to [Persist Connection Information](https://pnp.github.io/cli-microsoft365/concepts/persisting-connection/){:target="_blank"}. 
+
+After logging in to Microsoft 365, the CLI for Microsoft 365 will persist the information about the connection until you explicitly log out from Microsoft 365 Once you have authenticated to the tenant, your scripts will be executed without the need for authentication every time. Since the solution is not a confidential or Complex business Process, it is safe to go ahead with this approach. CLI for Microsoft 365 also provides [Logging in with Certificate](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/#log-in-using-a-certificate){:target="_blank"} if you prefer that approach.
 
 ### Get status of Tenant
 
-First step for the script is to get the current status using [tenant status list](https://pnp.github.io/cli-microsoft365/cmd/tenant/status/status-list/){:target="_blank"} command. In our case, we just want to get the services which are not normal.
-Here, we use the tenant status list command and would pass [JMESPath Query](https://jmespath.org/){:target="_blank"} since CLI for Microsoft 365 supports that. This query is supported in cross platform as well. We will retrieve all the services which are not running normally and hence we would the JMESPath query would be something like `?Status != 'ServiceOperational'`.
+The first step for the script is to get the current status using [tenant status list](https://pnp.github.io/cli-microsoft365/cmd/tenant/status/status-list/){:target="_blank"} command. In our case, we just want to get the services which are not normal.
+Here, we use the tenant status list command and would pass [JMESPath Query](https://jmespath.org/){:target="_blank"} since CLI for Microsoft 365 supports that. This query is supported in cross-platform as well. We will retrieve all the services which are not running normally and hence we would the JMESPath query would be something like `?Status != 'ServiceOperational'`.
 
 Based on that, our command may look something like below
 
@@ -59,13 +60,13 @@ Based on that, our command may look something like below
 m365 tenant status list --query "value[?Status != 'ServiceOperational']"  --output json
 ```
 
->>Another biggest advantage of CLI for Microsoft 365 is that, all the command provides an option for you to [return the values in a JSON string](https://pnp.github.io/cli-microsoft365/user-guide/cli-output-mode/#json-output-mode){:target="_blank"}. With JSON, it is super powerful and flexible and you can easily manipulate the data in your scripts
+>>Another biggest advantage of CLI for Microsoft 365 is that all the command provides an option for you to [return the values in a JSON string](https://pnp.github.io/cli-microsoft365/user-guide/cli-output-mode/#json-output-mode){:target="_blank"}. With JSON, it is super powerful and flexible and you can easily manipulate the data in your scripts.
 
 ### Pushing to SharePoint list when Services are not normal
 
 #### SharePoint List
 
-Here we are using a SharePoint List in one of the SharePoint site. Advantage of that is, you can have the information kept and you can tag it to a Power Automate if you want build some Logics (I have created a [Power Automate solution](#bonus-solution---configure-power-automate-for-doing-any-business-process) so that can have a look into that and design your requirements accordingly).
+Here we are using a SharePoint List in one of the SharePoint sites. The advantage of that is, you can have the information kept and you can tag it to a Power Automate if you want to build some Logics (I have created a [Power Automate solution](#bonus-solution---configure-power-automate-for-doing-any-business-process) so that can have a look into that and design your requirements accordingly). 
 In my case, SharePoint List look something like below
 
 ![M365HealthStatusOutageList](../assets/images/blog-usedimages/o365-health-status/SPList.jpg)
@@ -73,8 +74,7 @@ In my case, SharePoint List look something like below
 #### Adding to SharePoint List if a Service is not Normal
 
 We will be using [spo listitem add](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-add/){:target="_blank"} which will add the item to SharePoint List.
-Since we are already authenticated to your tenant, all we need to do is to use the command directly.
-Before we do that, we will just check the current SharePoint list whether the outage is already added. Our plan is to have the script running in a fixed interval, say every **15 minutes** or **30 minutes**. In that case there is a chance that outage is still there and we do not need the entry to be duplicated.
+Since we are already authenticated to your tenant, all we need to do is to use the command directly. Before we do that, we will just check the current SharePoint list whether the outage is already added. We plan to have the script running in a fixed interval, say every **15 minutes** or **30 minutes**. In that case there is a chance that outage is still there and we do not need the entry to be duplicated.
 So we would get the items from the current SharePoint List using the command [spo listitem get](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-get/){:target="_blank"} and will check whether the current outage is already there in the List.
 
 - If it is there,
