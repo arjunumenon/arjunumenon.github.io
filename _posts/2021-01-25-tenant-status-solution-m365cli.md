@@ -47,7 +47,7 @@ In this blog, I am using Windows for showing the use case. You as a user are not
 
 The biggest advantage CLI for Microsoft 365 has is its ability to [Persist Connection Information](https://pnp.github.io/cli-microsoft365/concepts/persisting-connection/){:target="_blank"}. 
 
-After logging in to Microsoft 365, the CLI for Microsoft 365 will persist the information about the connection until you explicitly log out from Microsoft 365 Once you have authenticated to the tenant, your scripts will be executed without the need for authentication every time. Since the solution is not a confidential or Complex business Process, it is safe to go ahead with this approach. CLI for Microsoft 365 also provides [Logging in with Certificate](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/#log-in-using-a-certificate){:target="_blank"} if you prefer that approach.
+After logging in to Microsoft 365, the CLI for Microsoft 365 will persist the information about the connection until you explicitly log out from Microsoft 365. Once you have authenticated to the tenant, your scripts will be executed without the need for authentication every time. Since the solution is not a confidential or had complex business process, it is safe to go ahead with this approach. CLI for Microsoft 365 also provides [logging in using a certificate](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/#log-in-using-a-certificate){:target="_blank"} if you prefer that approach.
 
 ### Get status of Tenant
 
@@ -66,16 +66,15 @@ m365 tenant status list --query "value[?Status != 'ServiceOperational']"  --outp
 
 #### SharePoint List
 
-Here we are using a SharePoint List in one of the SharePoint sites. The advantage of that is, you can have the information kept and you can tag it to a Power Automate if you want to build some Logics (I have created a [Power Automate solution](#bonus-solution---configure-power-automate-for-doing-any-business-process) so that can have a look into that and design your requirements accordingly). 
+Here we are using a SharePoint List in one of the SharePoint sites. The advantage of that is, you can have the information kept and you can tag it to a Power Automate if you want to build some logics (I have created a [Power Automate solution](#bonus-solution---configure-power-automate-for-doing-any-business-process) so that can you can have a look into that and design your requirements accordingly).
 In my case, SharePoint List look something like below
 
 ![M365HealthStatusOutageList](../assets/images/blog-usedimages/o365-health-status/SPList.jpg)
 
 #### Adding to SharePoint List if a Service is not Normal
 
-We will be using [spo listitem add](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-add/){:target="_blank"} which will add the item to SharePoint List.
-Since we are already authenticated to your tenant, all we need to do is to use the command directly. Before we do that, we will just check the current SharePoint list whether the outage is already added. We plan to have the script running in a fixed interval, say every **15 minutes** or **30 minutes**. In that case there is a chance that outage is still there and we do not need the entry to be duplicated.
-So we would get the items from the current SharePoint List using the command [spo listitem get](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-get/){:target="_blank"} and will check whether the current outage is already there in the List.
+We will be using [spo listitem add](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-add/){:target="_blank"} which will add the item to SharePoint List. Since we are already authenticated to your tenant, all we need to do is to use the command directly. Before we do that, we will just check the current SharePoint list whether the outage is already added. We plan to have the script running in a fixed interval, say every **15 minutes** or **30 minutes**.
+In that case, there is a chance that the outage is still there and we do not need the entry to be duplicated. So we would get the items from the current SharePoint List using the command [spo listitem get](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-get/){:target="_blank"} and will check whether the current outage is already there in the List.
 
 - If it is there,
   - Then we will not do anything.
@@ -133,16 +132,16 @@ Foreach ($currentOutageService in $currentOutageServices){
 }
 ```
 
-What we does in the above code is,
+What we do in the above code is,
 
-- If the item in SharePoint list is no mere there in list of Service which is NOT Operational
+- If the item in SharePoint list is not there in list of Service which is NOT Operational
 - Remove the Item from the SharePoint list using the command [`spo listitem remove`](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-remove/){:target="_blank"}
   - IF you want you can also copy item to another list for any historical purpose if needed
 - Send email to recipients informing that the Service is back to Normal
 
 ## Bonus Solution - Configure Power Automate for doing any Business Process
 
-As we may know [Power Automate](https://flow.microsoft.com/en-us/){:target="_blank"} provides rich features which we can leverage if you want to do any action based on the available triggers. Say for e.g., when your SharePoint service is not Operational, need to initiate a Service Request in your Help Desk support system automatically, we can always define the logic in Power Automate and once an outage is identified, Power Automate will initiate a Service Request in your help-desk system along with notifying concerned team.
+As we may know [Power Automate](https://flow.microsoft.com/en-us/){:target="_blank"} provides rich features which we can leverage if you want to do any action based on the available triggers. Say e.g., when your SharePoint service is not Operational, need to initiate a Service Request in your Help Desk support system automatically, we can always define the logic in Power Automate and once an outage is identified, Power Automate will initiate a Service Request in your help-desk system along with notifying concerned team.
 In our case, we are using SharePoint list item Creation / Modification as the trigger for initiating Process. Since we are adding list item using CLI for Microsoft 365, we can easily take that as the triggering point
 
 In my case, what I have done is that,
@@ -156,12 +155,12 @@ In my case, what I have done is that,
 3. If the `Still in Outage` flag in [SharePoint List](#sharepoint-list) is **No** (Modified Trigger Flow)
    1. Send notification via email about Service becoming Operational
 
-Like I said, mine is a super simple implementation just to demonstrate the Power of Power Automate which goes hand in hand with scripting tools. IF you have some business logic which needs to be in place with this, it always gives you the flexibility for the same.
+As I said, mine is a super simple implementation just to demonstrate the Power of Power Automate which goes hand in hand with scripting tools. If you have some business logic which needs to be in place with this, it always gives you the flexibility for the same.
 Just giving a glimpse of my simple Power Automate screen below,
 
 ### Power Automate - Creation Trigger
 
-Below Power Automate will do the process when a new outage is Reported by the script
+Below Power Automate will do the process when a new outage is reported by the script
 ![PowerAutomateNotifyonOutage](../assets/images/blog-usedimages/o365-health-status/Flow-Report-Outage.jpg)
 
 ### Power Automate - On Modified
@@ -191,7 +190,7 @@ In the below script, I have used PowerShell piping and hence the script may look
 
 The last part of the solution is to schedule the script which we have created. In my case, I have scheduled the script to run every half an hour. Schedule could be decided depending on your business case.
 
-In my case, since I am using a Windows machine, I would be using PowerShell as my scripting tool. Since CLI for Microsoft 365 is OS agnostic, you are free to use script based on your Operating System, be it on Windows or Mac OS or Linux.
+In my case, since I am using a Windows machine and hence I would be using PowerShell as my scripting tool. Since CLI for Microsoft 365 is OS agnostic, you are free to use script based on your Operating System, be it on Windows or Mac OS or Linux.
 
 In this blog, we will not be covering about scheduling the scripts in PowerShell since it is a straight forward activity. You can view [this blog](https://o365reports.com/2019/08/02/schedule-powershell-script-task-scheduler/){:target="_blank"} where it has explained how to configure powershell
 
