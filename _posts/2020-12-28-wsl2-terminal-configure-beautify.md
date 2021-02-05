@@ -34,6 +34,8 @@ Since we are focusing on setting up WSL terminal, it is best to keep your Ubuntu
 
 By default after configuring Linux, it will be configured to open your default profile folder which will be something like this ```/mnt/c/Users/yourusername```
 
+Microsoft  [recommends](https://docs.microsoft.com/en-us/windows/wsl/compare-versions#performance-across-os-file-systems){:target="_blank"} to have your Linux based codes in WSL File system rather than native Windows file system.
+
 According to [this post](https://www.hanselman.com/blog/its-time-for-you-to-install-windows-terminal){:target="_blank"} by the Super Nerd [Scott Hanselman](https://twitter.com/shanselman){:target="_blank"},
 
 >
