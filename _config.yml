@@ -30,7 +30,7 @@ social-linkedin: arjunumenon # Linkedin handle
 social-email: arjun@a-um.me #  Email address
 
 #Custom Configurations - Changed on runtime
-sticky-char-trunc: 128 #Give the number of charachters to be truncated
+sticky-char-trunc: 128 #Give the number of characters to be truncated
  
 # Defaults
 defaults:
