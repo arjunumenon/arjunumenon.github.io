@@ -19,6 +19,8 @@ In this blog, I am showing a way where you can schedule a script that will check
 
 In this blog, I am using Windows for showing the use case. You as a user are not restricted to use PowerShell since [CLI for Microsoft 365 is a cross-platform CLI](https://pnp.github.io/cli-microsoft365/about/why-cli/){:target="_blank"} and is independent of the OS platform which you use.
 
+**Update :** No time to go through the complete blog. Head to the [Complete Script Section](#complete-scripts)
+
 ## Index
 
 - [Solution](#solution)
@@ -39,6 +41,7 @@ In this blog, I am using Windows for showing the use case. You as a user are not
   - [Complete Script - Easily understandable](#complete-script---easily-understandable)
   - [Simple Script - Production Ready (Lines of Code : 4)](#simple-script---production-ready-lines-of-code--4)
 - [Schedule the script](#schedule-the-script)
+- [Complete Scripts](#complete-scripts)
 - [Need to know more on how to use CLI for Microsoft 365](#need-to-know-more-on-how-to-use-cli-for-microsoft-365)
 
 ## Implementation
@@ -193,6 +196,10 @@ The last part of the solution is to schedule the script which we have created. I
 In my case, since I am using a Windows machine and hence I would be using PowerShell as my scripting tool. Since CLI for Microsoft 365 is OS agnostic, you are free to use script based on your Operating System, be it on Windows or Mac OS or Linux.
 
 In this blog, we will not be covering about scheduling the scripts in PowerShell since it is a straight forward activity. You can view [this blog](https://o365reports.com/2019/08/02/schedule-powershell-script-task-scheduler/){:target="_blank"} where it has explained how to configure powershell
+
+## Complete Scripts
+
+Too lazy to build scripts. Don't worry. We got your back. Now the complete script package is available in the CLI for Microsoft 365 [sample scripts section](https://pnp.github.io/cli-microsoft365/sample-scripts/tenant/tenant-monitor-notify-healthstatus/){:target="_blank"}.
 
 ## Need to know more on how to use CLI for Microsoft 365
 
