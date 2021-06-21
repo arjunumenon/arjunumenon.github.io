@@ -4,7 +4,7 @@ title:  "Hactoberfest 2020 - Icing on the Cake - Journey"
 author: Arjun Menon
 categories: [ Hactoberfest2020, Microsoft365CLI ]
 image: assets/images/2020-11-01-Hactoberfest2020-Journey-ArjunMenon.jpg
-tags: [Hactoberfest2020, Microsoft365CLI, sticky]
+tags: [Hactoberfest2020, Microsoft365CLI]
 ---
 
 On a fine day when you are living with your life, you get an email with an beatiful message which says something like  below,
