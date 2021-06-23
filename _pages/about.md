@@ -4,7 +4,7 @@ layout: page
 permalink: "/about.html"
 comments: true
 ---
-I am Arjun U Menon. I work as a Technical Lead for an IT Services company based out of India. A person who started loving the cloud right at the moment when it came into the picture. Always been a fan of Microsoft stack and now exploring the beauty of the mighty Microsoft 365.
+I am Arjun U Menon. I work as an Associate Consultant for an IT Services company based out of India. A person who started loving the cloud right at the moment when it came into the picture. Always been a fan of Microsoft stack and now exploring the beauty of the mighty Microsoft 365.
 I like to call myself a consultant. Love to give solutions to the client who wants to be lazy like me. Wants to make things happen with the least number of steps. Those are the people who I love most and I thrive to make their life easier.
 I live in India where the diversities are part and parcel of the entire country and have been loving just because of that.
 
